@@ -14,28 +14,11 @@ var facts = [
 
 printar(facts); // Parte da demonstação
 
-// Vamos assumir que essa lista de fatos está ordenada dos mais antigos para os mais recentes.
-
-// Nesse schema,
-// o atributo 'telefone' tem cardinalidade 'muitos' (one-to-many), e 'endereço' é 'one-to-one'.
 var schema = [
     ['endereço', 'cardinality', 'one'],
     ['telefone', 'cardinality', 'many']
 ];
 
-
-// O objetivo desse desafio é escrever uma função que retorne quais são os fatos vigentes sobre essas entidades.
-// Ou seja, quais são as informações que estão valendo no momento atual.
-// A função deve receber `facts` (todos fatos conhecidos) e `schema` como argumentos.
-
-// Resultado esperado para este exemplo (mas não precisa ser nessa ordem):
-// [
-//   ['gabriel', 'endereço', 'av rio branco, 109', true],
-//   ['joão', 'endereço', 'rua bob, 88', true],
-//   ['joão', 'telefone', '91234-5555', true],
-//   ['gabriel', 'telefone', '98888-1111', true],
-//   ['gabriel', 'telefone', '56789-1010', true]
-// ];
 
 function verificaSchema(fact, schema) {
     for(var i = 0; i < schema.length; i++) {
@@ -51,7 +34,7 @@ function verificaSchema(fact, schema) {
     }
 }
 
-function verficaExistencia(fact, facts, pos, medidor) {
+function verficaExistencia(fact, facts, pos, medidor) { // Verifica a existência de um fato do último índice até 0, medidor define até onde um fato será verificado 
 
     var index = -1;
     var contador = 0;
