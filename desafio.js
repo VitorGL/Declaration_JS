@@ -12,7 +12,7 @@ var facts = [
   ['gabriel', 'telefone', '56789-1010', true], // 7
 ];
 
-printar(facts);
+printar(facts); // Parte da demonstação
 
 // Vamos assumir que essa lista de fatos está ordenada dos mais antigos para os mais recentes.
 
